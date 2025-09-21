@@ -1,0 +1,23 @@
+<section class="galeria">
+  <h2>Galería</h2>
+  <div class="galeria-grid">
+    <img src="img/foto1.jpeg" alt="Foto 1" class="galeria-thumb" onclick="ampliarImagen(this)">
+    <img src="img/foto2.jpeg" alt="Foto 2" class="galeria-thumb" onclick="ampliarImagen(this)">
+    
+  </div>
+  <div id="galeria-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:2000;">
+    <img id="galeria-img-ampliada" src="" alt="Imagen ampliada" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.2);cursor:pointer;">
+  </div>
+  <script>
+    function ampliarImagen(img) {
+      var modal = document.getElementById('galeria-modal');
+      var imgAmpliada = document.getElementById('galeria-img-ampliada');
+      imgAmpliada.src = img.src;
+      modal.style.display = 'flex';
+      imgAmpliada.onclick = function() {
+        modal.style.display = 'none';
+        imgAmpliada.src = '';
+      };
+    }
+  </script>
+</section>
