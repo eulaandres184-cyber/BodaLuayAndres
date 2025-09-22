@@ -6,13 +6,15 @@
   <title>Invitación a Nuestra Boda</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="text-center py-4 bg-success bg-opacity-25">
     <h1 class="display-4 text-success">
-      <a href="index.html" class="text-white text-decoration-none" style="cursor:pointer;">¡Nos Casamos!</a>
+      <a href="index.html" class="text-white text-decoration-none" style="cursor:pointer; font-family:'Dancing Script', cursive;">Lua & Andrés</a>
     </h1>
-    <p class="lead">Lua & Andrés</p>
+    <p class="lead">¡Nos Casamos!</p>
     <nav class="nav justify-content-center mt-3">
       <a class="nav-link text-success" href="#" onclick="loadSection('evento')">Evento</a>
       <a class="nav-link text-success" href="#" onclick="loadSection('galeria')">Galería</a>
@@ -20,27 +22,31 @@
     </nav>
   </header>
   <main id="main-content" class="container my-4">
-    <div class="row align-items-center mb-5">
+    <div class="row mb-5">
       <div class="col-md-6 mb-4 mb-md-0">
         <!-- Carrusel de imágenes -->
         <div id="carouselBoda" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/foto1.jpeg" class="d-block w-100 rounded" alt="Foto 1">
+              <img src="img/foto1.jpeg" class="d-block w-100 rounded" alt="Foto 1" style="height: 100%; min-height: 300px; object-fit: cover;">
             </div>
             <div class="carousel-item">
-              <img src="img/foto2.jpeg" class="d-block w-100 rounded" alt="Foto 2">
+              <img src="img/foto2.jpeg" class="d-block w-100 rounded" alt="Foto 2" style="height: 100%; min-height: 300px; object-fit: cover;">
             </div>
           </div>
         
         </div>
       </div>
-      <div class="col-md-6">
+      <div id="nuestrahistoria" class="col-md-6" style="margin-top:10px;">
         <!-- Descripción de cómo nos conocimos -->
         <div class="bg-white rounded shadow p-4 w-100">
-          <h3 class="text-success mb-3">Nuestra Historia</h3>
+          <!-- <h3 id="titlehistori" class="text-success mb-3">Nuestra Historia</h3> -->
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure amet neque, quis expedita rem, et qui facere ducimus quisquam, sapiente rerum tempore laudantium necessitatibus quibusdam dolores exercitationem. Provident beatae cumque asperiores amet, tenetur voluptates, exercitationem officiis tempore dolor rem quod deserunt ipsa laborum omnis ea at commodi mollitia, possimus nobis adipisci eaque consequuntur! Excepturi, dicta impedit! Debitis doloremque aliquid ea earum nostrum sint explicabo et. Possimus totam nihil, atque velit, nesciunt voluptatem molestiae impedit sapiente dicta quibusdam, repellat cupiditate dignissimos deserunt culpa similique distinctio quia quo blanditiis sunt. Labore repellat eaque voluptas at saepe magni, fugiat placeat debitis quaerat, ipsum veritatis architecto quas voluptatem nobis cumque aliquam quidem officiis. Quidem fuga vitae illum beatae quis consequatur aliquid vero. At impedit sed voluptates rem, officia amet harum atque debitis, quaerat doloribus aut omnis aspernatur, excepturi dolor modi nostrum quos fugit consectetur eaque nemo pariatur error dolorem fugiat accusamus! Similique perspiciatis, quae impedit assumenda modi tenetur suscipit. Eos magnam quis doloribus exercitationem aliquam culpa, temporibus totam consequuntur quam qui deserunt, iusto enim ut in omnis eaque, dolor at soluta? Minima earum ad error deserunt repellendus ut quos explicabo officia nihil fugiat voluptas debitis quam dolor est voluptatem id, sapiente, nobis voluptatibus ratione minus corporis pariatur architecto consequuntur sunt! Repudiandae modi voluptatem commodi nobis quasi non aliquam ullam quae, ab sed, illo cupiditate. 
+            <span class="frase">Año Nuevo, Vida Nueva</span><br>
+            Eso dice el dicho, y nosotros le hicimos caso. <br>
+            1 de Enero de 2013 empieza nuestra historia juntos, y desde entonces hemos compartido innumerables momentos llenos de amor, risas y aventuras.
+            ............
+
           </p>
         </div>
       </div>
