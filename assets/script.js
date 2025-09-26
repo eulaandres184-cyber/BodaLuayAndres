@@ -44,13 +44,39 @@ window.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.replace('#','') || 'evento';
   loadSection(hash, false);
   iniciarCountdown();
+  iniciarRSVP();
 });
 
 window.addEventListener('popstate', (e) => {
   const section = (e.state && e.state.section) || window.location.hash.replace('#','') || 'evento';
   loadSection(section, false);
   iniciarCountdown();
+  iniciarRSVP();
 });
+
+function iniciarRSVP() {
+  const form = document.getElementById('rsvpForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var nombre = document.getElementById('nombre').value || '';
+    var correo = document.getElementById('correo').value || '';
+    fetch('https://formspree.io/f/xwkgygqv', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(this)
+    }).then(function(response) {
+      if(response.ok) {
+        document.getElementById('popupRSVPText').textContent = `Te esperamos ${nombre}`;
+        document.getElementById('popupRSVP').style.display = 'flex';
+        form.reset();
+      } else {
+        document.getElementById('popupRSVPText').textContent = 'Hubo un error, intenta nuevamente.';
+        document.getElementById('popupRSVP').style.display = 'flex';
+      }
+    });
+  });
+}
 
 function iniciarCountdown() {
   const countdownDiv = document.getElementById('countdown');
